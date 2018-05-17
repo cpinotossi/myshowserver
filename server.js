@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-var showServer = require('showServer');
+var showServer = require('showserver');
 showServer.start();
 
