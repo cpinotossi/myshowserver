@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+var showServer = require('../index.js');
+var cmd = require('commander');
+
+
+cmd
+  .version('1.0.0')
+  .option('-h, --http [type]', 'port to be used for http traffic')
+  .option('-s, --https [type]', 'port to be used for https traffic')
+  .parse(process.argv);
+
+var httpPort = cmd.http || 80;
+var httpsPort = cmd.https || 443;
+showServer.start(httpPort,httpsPort);
+
