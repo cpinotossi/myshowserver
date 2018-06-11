@@ -9,6 +9,6 @@
   "author": "Christian Pino Tossi <cpinotossi@web.de> (http://edgegate.de)",
   "license": "MIT",
   "dependencies": {
-    "showserver": "^1.0.7"
+    "showserver": "^1.0.9"
   }
 }
