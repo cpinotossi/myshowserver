@@ -1,6 +1,9 @@
 #Google Drive Mac helper files
 Icon*
 
+#local content which should not be added to git
+misc
+
 # Logs
 logs
 *.log
