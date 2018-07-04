@@ -24,8 +24,9 @@ var staticOptions = {
   }
 }
 
-//app.use(express.static(__dirname + '/public', staticOptions));
-app.use(serveStatic(path.join(__dirname, 'public'), staticOptions));
+
+// Serve Test Image.
+app.use('/images', express.static(__dirname + '/public'));
 
 //needs to be set before any app.use path match:
 app.use(function (req, res, next) {
@@ -37,8 +38,8 @@ app.use(function (req, res, next) {
   next();
 });
 
-// Serve Test Image.
-app.use('/images', express.static(__dirname + '/public'));
+app.use(serveStatic(path.join(__dirname, 'public'), staticOptions));
+
 
 //GET Request Handler
 // app.get('/*', (req, res) => {
