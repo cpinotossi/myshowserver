@@ -41,14 +41,14 @@ app.use(function (req, res, next) {
 app.use('/images', express.static(__dirname + '/public'));
 
 //GET Request Handler
-app.get('/*', (req, res) => {
-  var url = JSON.stringify(req.url, null, 4);
-  var headers = JSON.stringify(req.headers, null, 4);
-  var requestDetails = url+"\n"+headers;
-  console.log("Request Header:"+requestDetails);
-  console.log("Response Header:"+JSON.stringify(res.header()._headers, null, 4))
-  res.send(requestDetails+"\n"+JSON.stringify(res.header()._headers, null, 4));
-})
+// app.get('/*', (req, res) => {
+//   var url = JSON.stringify(req.url, null, 4);
+//   var headers = JSON.stringify(req.headers, null, 4);
+//   var requestDetails = url+"\n"+headers;
+//   console.log("Request Header:"+requestDetails);
+//   console.log("Response Header:"+JSON.stringify(res.header()._headers, null, 4))
+//   res.send(requestDetails+"\n"+JSON.stringify(res.header()._headers, null, 4));
+// })
 
 
 const http = require("http");
