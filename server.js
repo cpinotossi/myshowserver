@@ -27,7 +27,6 @@ var staticOptions = {
 
 // Serve Test Image.
 app.use('/images', express.static(__dirname + '/public'));
-app.use('/cropper', express.static(__dirname + '/public'));
 
 //needs to be set before any app.use path match:
 app.use(function (req, res, next) {
