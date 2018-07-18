@@ -56,4 +56,5 @@ const http = require("http");
 const server = http.createServer(app);
 //Start Server
 const port = process.env.PORT || 8080;
+console.log("port:"+port);
 server.listen(port);
