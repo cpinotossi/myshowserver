@@ -8,6 +8,7 @@ const path = require('path');
 const fs = require('fs');
 var defaultTTL = "300";
 var bodyParser = require('body-parser');
+process.env.PWD = process.cwd()
 
 //instantiate an express object
 const app = express();
@@ -26,7 +27,7 @@ var staticOptions = {
 
 
 // Serve Test Image.
-app.use('/images', express.static(__dirname + '/public'));
+app.use('/images', express.static(process.env.PWD + '/public'));
 
 //needs to be set before any app.use path match:
 app.use(function (req, res, next) {
