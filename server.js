@@ -11,19 +11,19 @@ var bodyParser = require('body-parser');
 process.env.PWD = process.cwd()
 
 
-const EdgeAuth = require('akamai-edgeauth')
-//const http = require('http') // Module for the test
-
-var EA_ENCRYPTION_KEY = 'c0f462ec571c5b94371694c118583614c45f9252622732dc621d6e309d17b9aa'
-var DURATION = 31622400 // year in seconds
+// const EdgeAuth = require('akamai-edgeauth')
+// //const http = require('http') // Module for the test
+//
+// var EA_ENCRYPTION_KEY = 'c0f462ec571c5b94371694c118583614c45f9252622732dc621d6e309d17b9aa'
+// var DURATION = 31622400 // year in seconds
 
 // EdgeAuth for Query string
-var ea = new EdgeAuth({
-    key: EA_ENCRYPTION_KEY,
-    windowSeconds: DURATION,
-    escapeEarly: false,
-    tokenName: "itoken"
-});
+// var ea = new EdgeAuth({
+//     key: EA_ENCRYPTION_KEY,
+//     windowSeconds: DURATION,
+//     escapeEarly: false,
+//     tokenName: "itoken"
+// });
 
 
 //instantiate an express object
@@ -56,9 +56,9 @@ app.use(function (req, res, next) {
   var requestDetails = url+"\n"+headers;
 
   //Compute EdgeAuth Token
-  var requestURL = req.url;
-  var token = ea.generateURLToken(requestURL)
-  var edgeAuthUrlPath = `${requestURL}&${ea.options.tokenName}=${token}`;
+  // var requestURL = req.url;
+  // var token = ea.generateURLToken(requestURL)
+  // var edgeAuthUrlPath = `${requestURL}&${ea.options.tokenName}=${token}`;
   console.log("edgeAuthUrlPath:"+edgeAuthUrlPath);
   console.log("Request Header:"+requestDetails);
   next();
