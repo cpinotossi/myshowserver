@@ -59,7 +59,7 @@ app.use(function (req, res, next) {
   // var requestURL = req.url;
   // var token = ea.generateURLToken(requestURL)
   // var edgeAuthUrlPath = `${requestURL}&${ea.options.tokenName}=${token}`;
-  console.log("edgeAuthUrlPath:"+edgeAuthUrlPath);
+  // console.log("edgeAuthUrlPath:"+edgeAuthUrlPath);
   console.log("Request Header:"+requestDetails);
   next();
 });
