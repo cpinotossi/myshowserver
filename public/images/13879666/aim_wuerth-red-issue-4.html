@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://wwnd.akaimaging.com/ImReports/report/view/1532600313811_627F3C39/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>Akamai Image Comparison: wuerth-red-issue-4</title>
+		<style>
+body {
+	margin:           auto;
+	padding:          1em;
+	font-family:      Helvetica, Sans-Serif;
+	font-size:        12pt;
+	background-color: #222;
+	color:            #ddd;
+}
+
+h1 {
+	margin-top: 0;
+	font-size:  16pt;
+}
+
+#comparison {
+	display: inline-block;
+	margin:  auto;
+	width:   auto;
+}
+
+#controls {
+	width:            325pt;
+	padding:          0.5em 0 0 0;
+	text-align:       left;
+	background-color: #444;
+	float:            left;
+}
+
+#controls fieldset {
+	margin:  0;
+	border:  0;
+	padding: 4pt 8pt;
+}
+
+#controls fieldset header {
+	font-size:      12pt;
+	font-weight:    bold;
+	padding:        0;
+	padding-bottom: 0.25em;
+}
+
+#controls fieldset fieldset {
+	display: inline-block;
+	padding: 4pt 10pt;
+}
+
+#controls fieldset fieldset header {
+	font-weight: normal;
+}
+
+#controls label {
+	display:      inline-block;
+	margin-right: 1em;
+}
+
+#staticQualityControls label {
+	min-width: 5em;
+}
+
+#perceptualQualityControls label {
+	min-width: 8em;
+}
+
+#controls input {
+	margin-right: 0.5em;
+}
+
+#imageName {
+	max-width: 300pt;
+}
+
+#imageData {
+	background-color: #333;
+	padding:          4pt 8pt;
+	font-size:        9pt;
+	text-align:       left;
+}
+
+#imageData table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#imageData table td, #imageData table th {
+	text-align:    right;
+	padding-right: 4pt;
+	padding-left:  4pt;
+}
+
+#imageData table td {
+	font-family: Monospace;
+}
+
+#viewer {
+	margin-left: 325pt;
+}
+
+#viewerImageContainer {
+	background-color: #666;
+	background-image:
+		linear-gradient( 45deg, #555 25%, transparent 25%),
+		linear-gradient(-45deg, #555 25%, transparent 25%),
+		linear-gradient( 45deg, transparent 75%, #555 75%),
+		linear-gradient(-45deg, transparent 75%, #555 75%);
+	background-size: 32pt 32pt;
+	background-position: 0 0, 0pt 16pt, 16pt 16pt, 16pt 0pt;
+}
+
+#viewerImageContainer img {
+	display: block;
+	margin:  auto;
+}
+
+.tooltipper {
+	-webkit-text-decoration: underline dashed;
+	text-decoration:         underline dashed;
+}
+
+input[type=radio] {
+	-webkit-appearance: none;
+	appearance:         none;
+	background-color:   #333;
+	color:              #ddd;
+	border:             0;
+	border-radius:      50%;
+	margin:             0 0.5em 0.25em 0;
+	padding:            0;
+	width:              1.5em;
+	height:             1.5em;
+	text-align:         center;
+	vertical-align:     middle;
+	font-size:          11pt;
+}
+
+input[type=radio]:checked {
+	background-color: #222;
+}
+
+input[type=radio]:checked::after {
+	display:          block;
+	border:           0;
+	border-radius:    50%;
+	padding:          0;
+	margin:           0.5em;
+	width:            0.5em;
+	height:           0.5em;
+	background-color: #ddd;
+	content:          " ";
+}
+
+		</style>
+	</head>
+	<body style="">
+		<h1 id="mainTitle">Akamai Image Comparison: wuerth-red-issue-4</h1>
+		<div id="comparison">
+			<div id="controls">
+				<form>
+					<fieldset id="imageControls" style="display: none;">
+						<header>Image:</header>
+						<select id="imageName" class="input">
+						<option value="https://showserver.herokuapp.com/images/13879666_orig.jpg">https://showserver.herokuapp.com/images/13879666_orig.jpg</option></select>
+					</fieldset>
+					<fieldset id="scenarioControls">
+						<header><u>S</u>cenario:</header>
+					<label><input type="radio" name="scenario" value="generic" class="input inputScenario" dcvalue="generic">Generic</label><label><input type="radio" name="scenario" value="chrome" class="input inputScenario" dcvalue="chrome">Chrome</label></fieldset>
+					<fieldset id="breakpointControls">
+						<header><u>B</u>reakpoint:</header>
+					<label><input type="radio" name="breakpoint" value="800" class="input inputBreakpoint" dcvalue="800">800</label></fieldset>
+					<fieldset id="subSamplingControls">
+						<header><u>C</u>hroma Subsampling Quality:</header>
+					<label><input type="radio" name="subSampling" value="full" class="input inputSubSampling" dcvalue="full">Full</label><label><input type="radio" name="subSampling" value="half" class="input inputSubSampling" dcvalue="half">Half</label><label><input type="radio" name="subSampling" value="quarter" class="input inputSubSampling" dcvalue="quarter">Quarter</label></fieldset>
+					<fieldset id="qualityControls">
+						<header><u>Q</u>uality:</header>
+						<fieldset id="staticQualityControls">
+							<header>Static:</header>
+						<label><input type="radio" name="quality" value="raw" class="input inputQuality" dcvalue="raw">Raw</label><label><input type="radio" name="quality" value="static_95" class="input inputQuality" dcvalue="static_95">95</label><label><input type="radio" name="quality" value="static_90" class="input inputQuality" dcvalue="static_90">90</label><label><input type="radio" name="quality" value="static_85" class="input inputQuality" dcvalue="static_85">85</label><label><input type="radio" name="quality" value="static_80" class="input inputQuality" dcvalue="static_80">80</label><label><input type="radio" name="quality" value="static_75" class="input inputQuality" dcvalue="static_75">75</label><label><input type="radio" name="quality" value="static_70" class="input inputQuality" dcvalue="static_70">70</label></fieldset>
+						<fieldset id="perceptualQualityControls">
+							<header>Perceptual:</header>
+						<label><input type="radio" name="quality" value="perceptual_high" class="input inputQuality" dcvalue="perceptual_high">High</label><label><input type="radio" name="quality" value="perceptual_mediumHigh" class="input inputQuality" dcvalue="perceptual_mediumHigh">Medium High</label><label><input type="radio" name="quality" value="perceptual_medium" class="input inputQuality" dcvalue="perceptual_medium">Medium</label><label><input type="radio" name="quality" value="perceptual_mediumLow" class="input inputQuality" dcvalue="perceptual_mediumLow">Medium Low</label><label><input type="radio" name="quality" value="perceptual_low" class="input inputQuality" dcvalue="perceptual_low">Low</label></fieldset>
+					</fieldset>
+					<fieldset id="displayControls">
+						<header><u>D</u>isplay:</header>
+						<label><input type="radio" name="display" value="image" class="input inputDisplay" checked="checked" dcvalue="image">Image</label>
+						<label><input type="radio" name="display" value="heatmap" class="input inputDisplay" dcvalue="heatmap">Heatmap</label>
+					</fieldset>
+				</form>
+				<div id="imageData"><table><tr><th>Quality</th><th>Format</th><th>Size</th><th>NDSSIM</th><th>DSSIM</th></tr><tr><td><span class="tooltipper" title="Image Converter 100, Image Manager 100, JPEGTurbo 100, MozJPEG 100">Pristine</span></td><td>jpg</td><td>1.25 MiB</td><td>N/A</td><td>N/A</td></tr><tr><td>95</td><td>jpg</td><td>89.69 KiB</td><td>0.00334</td><td>0.00124</td></tr><tr><td>90</td><td>jpg</td><td>64.27 KiB</td><td>0.00571</td><td>0.00193</td></tr><tr><td>85</td><td>jpg</td><td>55.77 KiB</td><td>0.00794</td><td>0.00253</td></tr><tr><td>80</td><td>jpg</td><td>41.84 KiB</td><td>0.01171</td><td>0.00354</td></tr><tr><td>75</td><td>jpg</td><td>34.84 KiB</td><td>0.01585</td><td>0.00457</td></tr><tr><td>70</td><td>jpg</td><td>29.64 KiB</td><td>0.01961</td><td>0.00549</td></tr><tr><td>High: 84</td><td>jpg</td><td>50.01 KiB</td><td>0.00886</td><td>0.00278</td></tr><tr><td>Medium High: 79</td><td>jpg</td><td>40.63 KiB</td><td>0.01244</td><td>0.00373</td></tr><tr><td>Medium: 49</td><td>jpg</td><td>22.04 KiB</td><td>0.02904</td><td>0.00774</td></tr><tr><td>Medium Low: 25</td><td>jpg</td><td>18.40 KiB</td><td>0.03674</td><td>0.00952</td></tr><tr><td>Low: 5</td><td>jpg</td><td>14.59 KiB</td><td>0.04857</td><td>0.01236</td></tr></table></div>
+			</div>
+			<div id="viewer">
+				<div id="viewerImageContainer"><img src="./aim_wuerth-red-issue-4_files/https___showserver.herokuapp.com_images_13879666_orig.jpg.jpg" srcset="images/akamai/w_0800/derivatives/ss_full/q_perceptual_high/sc_chrome/images/https___showserver.herokuapp.com_images_13879666_orig.jpg.jpg 2x"></div>
+			</div>
+		</div>
+		<script>
+var reportData = {"name":"wuerth-red-issue-4","date":1532600313811,"configuration":{"widths":[800],"subSampleQualities":["full","half","quarter"],"qualities":[95,90,85,80,75,70],"perceptualQualities":["high","mediumHigh","medium","mediumLow","low"],"scenarios":["generic","chrome"]},"images":{"https://showserver.herokuapp.com/images/13879666_orig.jpg":{"baseName":"https___showserver.herokuapp.com_images_13879666_orig.jpg","pristineFormat":"jpg","pristineSize":1307511,"pristineEstimatedQuality":"Image Converter 100, Image Manager 100, JPEGTurbo 100, MozJPEG 100","derivatives":{"800":{"full":{"static_95":{"generic":{"format":"jpg","size":91847,"quality":95,"dssim":0.00124359130859375,"ndssim":0.0033409595489501953},"chrome":{"format":"jpg","size":91847,"quality":95,"dssim":0.00124359130859375,"ndssim":0.0033409595489501953}},"static_90":{"generic":{"format":"jpg","size":65813,"quality":90,"dssim":0.0019269585609436035,"ndssim":0.005706131458282471},"chrome":{"format":"jpg","size":65813,"quality":90,"dssim":0.0019269585609436035,"ndssim":0.005706131458282471}},"static_85":{"generic":{"format":"jpg","size":57104,"quality":85,"dssim":0.0025317370891571045,"ndssim":0.007937878370285034},"chrome":{"format":"jpg","size":57104,"quality":85,"dssim":0.0025317370891571045,"ndssim":0.007937878370285034}},"static_80":{"generic":{"format":"jpg","size":42841,"quality":80,"dssim":0.003542870283126831,"ndssim":0.011714398860931396},"chrome":{"format":"jpg","size":42841,"quality":80,"dssim":0.003542870283126831,"ndssim":0.011714398860931396}},"static_75":{"generic":{"format":"jpg","size":35675,"quality":75,"dssim":0.004573076963424683,"ndssim":0.015852272510528564},"chrome":{"format":"jpg","size":35675,"quality":75,"dssim":0.004573076963424683,"ndssim":0.015852272510528564}},"static_70":{"generic":{"format":"jpg","size":30355,"quality":70,"dssim":0.00548902153968811,"ndssim":0.019607365131378174},"chrome":{"format":"jpg","size":30355,"quality":70,"dssim":0.00548902153968811,"ndssim":0.019607365131378174}},"perceptual_high":{"generic":{"format":"jpg","size":51212,"quality":84,"dssim":0.002780735492706299,"ndssim":0.008856892585754395},"chrome":{"format":"jpg","size":51212,"quality":84,"dssim":0.002780735492706299,"ndssim":0.008856892585754395}},"perceptual_mediumHigh":{"generic":{"format":"jpg","size":41602,"quality":79,"dssim":0.0037279129028320312,"ndssim":0.012438803911209106},"chrome":{"format":"jpg","size":41602,"quality":79,"dssim":0.0037279129028320312,"ndssim":0.012438803911209106}},"perceptual_medium":{"generic":{"format":"jpg","size":22572,"quality":49,"dssim":0.007735759019851685,"ndssim":0.029036402702331543},"chrome":{"format":"jpg","size":22572,"quality":49,"dssim":0.007735759019851685,"ndssim":0.029036402702331543}},"perceptual_mediumLow":{"generic":{"format":"jpg","size":18838,"quality":25,"dssim":0.009518295526504517,"ndssim":0.036739230155944824},"chrome":{"format":"jpg","size":18838,"quality":25,"dssim":0.009518295526504517,"ndssim":0.036739230155944824}},"perceptual_low":{"generic":{"format":"jpg","size":14945,"quality":5,"dssim":0.012363523244857788,"ndssim":0.04856562614440918},"chrome":{"format":"jpg","size":14945,"quality":5,"dssim":0.012363523244857788,"ndssim":0.04856562614440918}}},"half":{"static_95":{"generic":{"format":"jpg","size":76035,"quality":95,"dssim":0.0012674033641815186,"ndssim":0.0034195780754089355},"chrome":{"format":"jpg","size":76035,"quality":95,"dssim":0.0012674033641815186,"ndssim":0.0034195780754089355}},"static_90":{"generic":{"format":"jpg","size":56090,"quality":90,"dssim":0.0019504725933074951,"ndssim":0.005794227123260498},"chrome":{"format":"jpg","size":56090,"quality":90,"dssim":0.0019504725933074951,"ndssim":0.005794227123260498}},"static_85":{"generic":{"format":"jpg","size":48878,"quality":85,"dssim":0.0025568604469299316,"ndssim":0.008032649755477905},"chrome":{"format":"jpg","size":48878,"quality":85,"dssim":0.0025568604469299316,"ndssim":0.008032649755477905}},"static_80":{"generic":{"format":"jpg","size":37580,"quality":80,"dssim":0.0035685300827026367,"ndssim":0.011803001165390015},"chrome":{"format":"jpg","size":37580,"quality":80,"dssim":0.0035685300827026367,"ndssim":0.011803001165390015}},"static_75":{"generic":{"format":"jpg","size":31267,"quality":75,"dssim":0.00459626317024231,"ndssim":0.015924066305160522},"chrome":{"format":"jpg","size":31267,"quality":75,"dssim":0.00459626317024231,"ndssim":0.015924066305160522}},"static_70":{"generic":{"format":"jpg","size":26706,"quality":70,"dssim":0.0055072009563446045,"ndssim":0.01966679096221924},"chrome":{"format":"jpg","size":26706,"quality":70,"dssim":0.0055072009563446045,"ndssim":0.01966679096221924}},"perceptual_high":{"generic":{"format":"jpg","size":44547,"quality":84,"dssim":0.0028078854084014893,"ndssim":0.008945763111114502},"chrome":{"format":"jpg","size":44547,"quality":84,"dssim":0.0028078854084014893,"ndssim":0.008945763111114502}},"perceptual_mediumHigh":{"generic":{"format":"jpg","size":36468,"quality":79,"dssim":0.0037504732608795166,"ndssim":0.01251143217086792},"chrome":{"format":"jpg","size":36468,"quality":79,"dssim":0.0037504732608795166,"ndssim":0.01251143217086792}},"perceptual_medium":{"generic":{"format":"jpg","size":19957,"quality":49,"dssim":0.007765769958496094,"ndssim":0.029156625270843506},"chrome":{"format":"jpg","size":19957,"quality":49,"dssim":0.007765769958496094,"ndssim":0.029156625270843506}},"perceptual_mediumLow":{"generic":{"format":"jpg","size":16639,"quality":25,"dssim":0.009567886590957642,"ndssim":0.03687584400177002},"chrome":{"format":"jpg","size":16639,"quality":25,"dssim":0.009567886590957642,"ndssim":0.03687584400177002}},"perceptual_low":{"generic":{"format":"jpg","size":13074,"quality":5,"dssim":0.012389779090881348,"ndssim":0.048682719469070435},"chrome":{"format":"jpg","size":13074,"quality":5,"dssim":0.012389779090881348,"ndssim":0.048682719469070435}}},"quarter":{"static_95":{"generic":{"format":"jpg","size":66408,"quality":95,"dssim":0.001271963119506836,"ndssim":0.0034491121768951416},"chrome":{"format":"webp","size":47440,"quality":95,"dssim":0.0014091730117797852,"ndssim":0.0033554434776306152}},"static_90":{"generic":{"format":"jpg","size":49982,"quality":90,"dssim":0.0019585490226745605,"ndssim":0.005829840898513794},"chrome":{"format":"webp","size":34052,"quality":90,"dssim":0.002068817615509033,"ndssim":0.00520855188369751}},"static_85":{"generic":{"format":"jpg","size":43430,"quality":85,"dssim":0.0025644302368164062,"ndssim":0.00806504487991333},"chrome":{"format":"webp","size":26360,"quality":85,"dssim":0.00288236141204834,"ndssim":0.007508963346481323}},"static_80":{"generic":{"format":"jpg","size":33677,"quality":80,"dssim":0.0035827159881591797,"ndssim":0.011847972869873047},"chrome":{"format":"webp","size":20530,"quality":80,"dssim":0.003878980875015259,"ndssim":0.010487943887710571}},"static_75":{"generic":{"format":"jpg","size":27980,"quality":75,"dssim":0.004615753889083862,"ndssim":0.0159875750541687},"chrome":{"format":"webp","size":15884,"quality":75,"dssim":0.005040079355239868,"ndssim":0.014213532209396362}},"static_70":{"generic":{"format":"jpg","size":23956,"quality":70,"dssim":0.005526751279830933,"ndssim":0.019741803407669067},"chrome":{"format":"webp","size":12972,"quality":70,"dssim":0.006032019853591919,"ndssim":0.017779260873794556}},"perceptual_high":{"generic":{"format":"jpg","size":39849,"quality":84,"dssim":0.0028156638145446777,"ndssim":0.008986234664916992},"chrome":{"format":"webp","size":24754,"quality":84,"dssim":0.003068208694458008,"ndssim":0.008049160242080688}},"perceptual_mediumHigh":{"generic":{"format":"jpg","size":36245,"quality":81,"dssim":0.003348320722579956,"ndssim":0.011011481285095215},"chrome":{"format":"webp","size":18110,"quality":78,"dssim":0.004432111978530884,"ndssim":0.012157320976257324}},"perceptual_medium":{"generic":{"format":"jpg","size":17827,"quality":49,"dssim":0.0077762603759765625,"ndssim":0.029197216033935547},"chrome":{"format":"webp","size":9274,"quality":44,"dssim":0.008257120847702026,"ndssim":0.026295214891433716}},"perceptual_mediumLow":{"generic":{"format":"jpg","size":14823,"quality":25,"dssim":0.009570956230163574,"ndssim":0.03690272569656372},"chrome":{"format":"webp","size":7520,"quality":25,"dssim":0.010082632303237915,"ndssim":0.03385072946548462}},"perceptual_low":{"generic":{"format":"jpg","size":11573,"quality":5,"dssim":0.012411504983901978,"ndssim":0.048752427101135254},"chrome":{"format":"webp","size":6764,"quality":5,"dssim":0.011344373226165771,"ndssim":0.03897818922996521}}}}}}}};
+
+function zeroPad(width, value) {
+	var valueString = "" + value;
+	var pad         = "0".repeat(width);
+	return pad.substring(0, width - valueString.length) + valueString;
+}
+
+function fancyBytes(bytes) {
+	var prefixes = ["  ","Ki","Mi","Gi","Ti","Pi","Ei"];
+	var value    = parseInt(bytes);
+
+	for (var prefix = 0; value >= 1023.995 && prefix < prefixes.length - 1; ++prefix) value /= 1024;
+
+	if (0 !== prefix) value = value.toFixed(2);
+	return value + " " + prefixes[prefix] + "B";
+}
+
+function getScenarioString(scenario) {
+	switch (scenario) {
+		case "generic": return "Generic";
+		case "chrome" : return "Chrome" ;
+		case "safari" : return "Safari" ;
+		case "ie"     : return "IE/Edge";
+	}
+	return scenario;
+}
+
+function getPerceptualQualityString(perceptualQuality) {
+	switch (perceptualQuality) {
+		case "high":       return "High"       ;
+		case "mediumHigh": return "Medium High";
+		case "medium":     return "Medium"     ;
+		case "mediumLow":  return "Medium Low" ;
+		case "low":        return "Low"        ;
+	}
+	return perceptualQuality;
+}
+
+function getSubsamplingString(subsampling) {
+	switch (subsampling) {
+		case "full":    return "Full";
+		case "half":    return "Half";
+		case "quarter": return "Quarter";
+	}
+	return subsampling;
+}
+
+var pixelRatio = " " + window.devicePixelRatio + "x";
+
+// Load Controls
+{
+	// Title
+	document.title = document.title + ": " + reportData["name"];
+	document.getElementById("mainTitle").appendChild(document.createTextNode(": " + reportData["name"]));
+}
+{
+	// Images
+	let imageFieldset = document.getElementById("imageControls");
+	let imageSelect   = document.getElementById("imageName"    );
+	let firstImage    = true;
+	for (let imageName in reportData["images"]) {
+		let imageOption = document.createElement("option");
+		imageOption.value = imageName;
+		imageOption.appendChild(document.createTextNode(imageName));
+		imageSelect.appendChild(imageOption);
+		if (firstImage) imageOption.selected = true;
+		firstImage = false;
+	}
+	if (Object.keys(reportData["images"]).length <= 1) {
+		imageFieldset.style.display = "none";
+	}
+}
+{
+	// Scenario
+	let scenariosFieldset = document.getElementById("scenarioControls");
+	let firstScenario     = true;
+	for (let scenario of reportData["configuration"]["scenarios"]) {
+		let scenarioLabel     = document.createElement("label");
+		let scenarioInput     = document.createElement("input");
+		let scenarioLabelText = document.createTextNode(getScenarioString(scenario));
+
+		scenarioInput.type      = "radio";
+		scenarioInput.name      = "scenario";
+		scenarioInput.value     = scenario;
+		scenarioInput.className = "input inputScenario";
+
+		scenarioLabel.appendChild(scenarioInput);
+		scenarioLabel.appendChild(scenarioLabelText);
+
+		scenariosFieldset.appendChild(scenarioLabel);
+
+		if (firstScenario) scenarioInput.checked = true;
+		firstScenario = false;
+	}
+	if (reportData["configuration"]["scenarios"].length <= 1) {
+		scenariosFieldset.style.display = "none";
+	}
+}
+{
+	// Breakpoints
+	let breakpointFieldset = document.getElementById("breakpointControls");
+	let firstBreakpoint    = true;
+	for (let breakpoint of reportData["configuration"]["widths"]) {
+		let breakpointLabel     = document.createElement("label");
+		let breakpointInput     = document.createElement("input");
+		let breakpointLabelText = document.createTextNode(breakpoint);
+
+		breakpointInput.type      = "radio";
+		breakpointInput.name      = "breakpoint";
+		breakpointInput.value     = breakpoint;
+		breakpointInput.className = "input inputBreakpoint";
+
+		breakpointLabel.appendChild(breakpointInput);
+		breakpointLabel.appendChild(breakpointLabelText);
+
+		breakpointFieldset.appendChild(breakpointLabel);
+
+		if (firstBreakpoint) breakpointInput.checked = true;
+		firstBreakpoint = false;
+	}
+	if (reportData["configuration"]["widths"].length == 1 && reportData["configuration"]["widths"][0] == 5000) {
+		breakpointFieldset.style.display = "none";
+	}
+}
+{
+	// SubSampling
+	let subSamplingFieldset = document.getElementById("subSamplingControls");
+	let firstSubSampling    = true;
+	for (let subSampling of reportData["configuration"]["subSampleQualities"]) {
+		let subSamplingLabel     = document.createElement("label");
+		let subSamplingInput     = document.createElement("input");
+		let subSamplingLabelText = document.createTextNode(getSubsamplingString(subSampling));
+
+		subSamplingInput.type      = "radio";
+		subSamplingInput.name      = "subSampling";
+		subSamplingInput.value     = subSampling;
+		subSamplingInput.className = "input inputSubSampling";
+
+		subSamplingLabel.appendChild(subSamplingInput);
+		subSamplingLabel.appendChild(subSamplingLabelText);
+
+		subSamplingFieldset.appendChild(subSamplingLabel);
+
+		if (firstSubSampling) subSamplingInput.checked = true;
+		firstSubSampling = false;
+	}
+	if (reportData["configuration"]["subSampleQualities"].length <= 1) {
+		subSamplingFieldset.style.display = "none";
+	}
+}
+{
+	// Static Quality
+	let staticQualityFieldset = document.getElementById("staticQualityControls");
+
+	let rawQualityLabel     = document.createElement("label");
+	let rawQualityInput     = document.createElement("input");
+	let rawQualityLabelText = document.createTextNode("Raw");
+
+	rawQualityInput.type      = "radio";
+	rawQualityInput.name      = "quality";
+	rawQualityInput.value     = "raw";
+	rawQualityInput.className = "input inputQuality";
+
+	rawQualityLabel.appendChild(rawQualityInput);
+	rawQualityLabel.appendChild(rawQualityLabelText);
+
+	staticQualityFieldset.appendChild(rawQualityLabel);
+
+	let firstStaticQuality = true;
+	for (let staticQuality of reportData["configuration"]["qualities"]) {
+		let staticQualityLabel     = document.createElement("label");
+		let staticQualityInput     = document.createElement("input");
+		let staticQualityLabelText = document.createTextNode(staticQuality);
+
+		staticQualityInput.type      = "radio";
+		staticQualityInput.name      = "quality";
+		staticQualityInput.value     = "static_" + staticQuality;
+		staticQualityInput.className = "input inputQuality";
+
+		staticQualityLabel.appendChild(staticQualityInput);
+		staticQualityLabel.appendChild(staticQualityLabelText);
+
+		staticQualityFieldset.appendChild(staticQualityLabel);
+
+		if (firstStaticQuality) staticQualityInput.checked = true;
+		firstStaticQuality = false;
+	}
+}
+{
+	// Perceptual Quality
+	let perceptualQualityFieldset = document.getElementById("perceptualQualityControls");
+	let firstPerceptualQuality = true;
+	for (let perceptualQuality of reportData["configuration"]["perceptualQualities"]) {
+		let perceptualQualityLabel     = document.createElement("label");
+		let perceptualQualityInput     = document.createElement("input");
+		let perceptualQualityLabelText = document.createTextNode(getPerceptualQualityString(perceptualQuality));
+
+		perceptualQualityInput.type      = "radio";
+		perceptualQualityInput.name      = "quality";
+		perceptualQualityInput.value     = "perceptual_" + perceptualQuality;
+		perceptualQualityInput.className = "input inputQuality";
+
+		perceptualQualityLabel.appendChild(perceptualQualityInput);
+		perceptualQualityLabel.appendChild(perceptualQualityLabelText);
+
+		perceptualQualityFieldset.appendChild(perceptualQualityLabel);
+
+		if (firstPerceptualQuality) perceptualQualityInput.checked = true;
+		firstPerceptualQuality = false;
+	}
+	if (reportData["configuration"]["perceptualQualities"].length <= 1) {
+		perceptualQualityFieldset.style.display = "none";
+	}
+}
+
+
+// Load Images
+var derivativeImagesBasePath = "images/akamai";
+var viewerImages = {};
+// Image
+for (let imageName in reportData["images"]) {
+	let currentImageSet  = viewerImages[imageName] = {};
+	let currentImageData = reportData["images"][imageName];
+	let imageBaseName    = currentImageData["baseName"];
+
+	// Widths
+	for (let width of reportData["configuration"]["widths"]) {
+		let currentWidthSet  = currentImageSet[width] = {};
+		let currentWidthPath = derivativeImagesBasePath + "/w_" + zeroPad(4, width);
+
+		// Raw Resize
+		let rawResizeImage           = new Image();
+		let rawResizePath            = currentWidthPath + "/rawResizes/" + imageBaseName + ".png";
+		rawResizeImage.src           = rawResizePath;
+		rawResizeImage.srcset        = rawResizePath + pixelRatio;
+		currentWidthSet["rawResize"] = rawResizeImage;
+
+		// Derivatives
+		let currentDerivativesSet  = currentWidthSet["derivatives"] = {};
+		let currentDerivativesData = currentImageData["derivatives"]["" + width];
+		let currentDerivativesPath = currentWidthPath + "/derivatives";
+		for (let subSampling of reportData["configuration"]["subSampleQualities"]) {
+			let currentSubSampleSet  = currentDerivativesSet[subSampling] = {};
+			let currentSubSampleData = currentDerivativesData[subSampling];
+			let currentSubSamplePath = currentDerivativesPath + "/ss_" + subSampling;
+
+			// Static quality
+			for (let staticQuality of reportData["configuration"]["qualities"]) {
+				let currentStaticQualitySet  = currentSubSampleSet["static_" + staticQuality] = {};
+				let currentStaticQualityData = currentSubSampleData["static_" + staticQuality];
+				let currentStaticQualityPath = currentSubSamplePath + "/q_static_" + zeroPad(3, staticQuality);
+
+				// Scenario
+				for (let scenario of reportData["configuration"]["scenarios"]) {
+					let currentScenarioData = currentStaticQualityData[scenario];
+					let currentScenarioPath = currentStaticQualityPath + "/sc_" + scenario;
+
+					let derivativeImage     = new Image();
+					let derivativeImagePath = currentScenarioPath + "/images/" + imageBaseName + "." + currentScenarioData["format"];
+					derivativeImage.src     = derivativeImagePath;
+					derivativeImage.srcset  = derivativeImagePath + pixelRatio;
+
+					let heatmapImage     = new Image();
+					let heatmapImagePath = currentScenarioPath + "/heatmaps/" + imageBaseName + ".jpg";
+					heatmapImage.src     = heatmapImagePath;
+					heatmapImage.srcset  = heatmapImagePath + pixelRatio;
+
+					currentStaticQualitySet[scenario] = {};
+					currentStaticQualitySet[scenario]["image"  ] = derivativeImage;
+					currentStaticQualitySet[scenario]["heatmap"] = heatmapImage   ;
+				}
+			}
+
+			// Perceptual quality
+			for (let perceptualQuality of reportData["configuration"]["perceptualQualities"]) {
+				let currentPerceptualQualitySet  = currentSubSampleSet["perceptual_" + perceptualQuality] = {};
+				let currentPerceptualQualityData = currentSubSampleData["perceptual_" + perceptualQuality];
+				let currentPerceptualQualityPath = currentSubSamplePath + "/q_perceptual_" + perceptualQuality;
+
+				// Scenario
+				for (let scenario of reportData["configuration"]["scenarios"]) {
+					let currentScenarioData = currentPerceptualQualityData[scenario];
+					let currentScenarioPath = currentPerceptualQualityPath + "/sc_" + scenario;
+
+					let derivativeImage     = new Image();
+					let derivativeImagePath = currentScenarioPath + "/images/" + imageBaseName + "." + currentScenarioData["format"];
+					derivativeImage.src     = derivativeImagePath;
+					derivativeImage.srcset  = derivativeImagePath + pixelRatio;
+
+					let heatmapImage     = new Image();
+					let heatmapImagePath = currentScenarioPath + "/heatmaps/" + imageBaseName + ".jpg";
+					heatmapImage.src     = heatmapImagePath;
+					heatmapImage.srcset  = heatmapImagePath + pixelRatio;
+
+					currentPerceptualQualitySet[scenario] = {};
+					currentPerceptualQualitySet[scenario]["image"  ] = derivativeImage;
+					currentPerceptualQualitySet[scenario]["heatmap"] = heatmapImage   ;
+				}
+			}
+
+		}
+	}
+}
+
+var imageNameElement    = document.getElementById        ("imageName"       );
+var scenarioElements    = document.getElementsByClassName("inputScenario"   );
+var breakpointElements  = document.getElementsByClassName("inputBreakpoint" );
+var subsamplingElements = document.getElementsByClassName("inputSubSampling");
+var qualityElements     = document.getElementsByClassName("inputQuality"    );
+var displayElements     = document.getElementsByClassName("inputDisplay"    );
+
+var showViewerImage = function() {
+	let imageName;
+	let scenario;
+	let breakpoint;
+	let subsampling;
+	let quality;
+	let display;
+
+	imageName = imageNameElement.value;
+	Array.from(scenarioElements).forEach(function(element) {
+		if (element.checked) scenario = element.value;
+	});
+	Array.from(breakpointElements).forEach(function(element) {
+		if (element.checked) breakpoint = element.value;
+	});
+	Array.from(subsamplingElements).forEach(function(element) {
+		if (element.checked) subsampling = element.value;
+	});
+	Array.from(qualityElements).forEach(function(element) {
+		if (element.checked) quality = element.value;
+	});
+	Array.from(displayElements).forEach(function(element) {
+		if (element.checked) display = element.value;
+	});
+
+	// Show Image
+	let selectedImage;
+	if ("raw" == quality) {
+		selectedImage = viewerImages[imageName][breakpoint]["rawResize"];
+	} else {
+		selectedImage = viewerImages[imageName][breakpoint]["derivatives"][subsampling][quality][scenario][display];
+	}
+
+	let viewerImageContainer = document.getElementById("viewerImageContainer");
+	if (undefined !== selectedImage) {
+		viewerImageContainer.replaceChild(selectedImage, viewerImageContainer.childNodes[0]);
+	}
+
+	// Show Data
+	let dataTable              = document.createElement("table");
+
+	let dataTableHeaderRow     = document.createElement("tr");
+	let dataTableQualityHeader = document.createElement("th");
+	let dataTableFormatHeader  = document.createElement("th");
+	let dataTableSizeHeader    = document.createElement("th");
+	let dataTableNdssimHeader  = document.createElement("th");
+	let dataTableDssimHeader   = document.createElement("th");
+
+	dataTableQualityHeader.appendChild(document.createTextNode("Quality"));
+	dataTableFormatHeader .appendChild(document.createTextNode("Format" ));
+	dataTableSizeHeader   .appendChild(document.createTextNode("Size"   ));
+	dataTableNdssimHeader .appendChild(document.createTextNode("NDSSIM" ));
+	dataTableDssimHeader  .appendChild(document.createTextNode("DSSIM"  ));
+
+	dataTableHeaderRow.appendChild(dataTableQualityHeader);
+	dataTableHeaderRow.appendChild(dataTableFormatHeader );
+	dataTableHeaderRow.appendChild(dataTableSizeHeader   );
+	dataTableHeaderRow.appendChild(dataTableNdssimHeader );
+	dataTableHeaderRow.appendChild(dataTableDssimHeader  );
+
+	dataTable.appendChild(dataTableHeaderRow);
+
+	let imageData = reportData["images"][imageName];
+
+	let pristineRow = document.createElement("tr");
+
+	let pristineQualityCell = document.createElement("td");
+	let pristineFormatCell  = document.createElement("td");
+	let pristineSizeCell    = document.createElement("td");
+	let pristineNdssimCell  = document.createElement("td");
+	let pristineDssimCell   = document.createElement("td");
+
+	let pristineQualityData = document.createElement("span");
+	pristineQualityData.classList.add("tooltipper");
+	pristineQualityData.title = imageData.pristineEstimatedQuality;
+	pristineQualityData.appendChild(document.createTextNode("Pristine"));
+
+	pristineQualityCell.appendChild(pristineQualityData                                        );
+	pristineFormatCell .appendChild(document.createTextNode(imageData.pristineFormat          ));
+	pristineSizeCell   .appendChild(document.createTextNode(fancyBytes(imageData.pristineSize)));
+	pristineNdssimCell .appendChild(document.createTextNode("N/A"                             ));
+	pristineDssimCell  .appendChild(document.createTextNode("N/A"                             ));
+
+	pristineRow.appendChild(pristineQualityCell);
+	pristineRow.appendChild(pristineFormatCell );
+	pristineRow.appendChild(pristineSizeCell   );
+	pristineRow.appendChild(pristineNdssimCell );
+	pristineRow.appendChild(pristineDssimCell  );
+
+	dataTable.appendChild(pristineRow);
+
+	for (let staticQuality of reportData["configuration"]["qualities"]) {
+		let derivativeData = imageData["derivatives"][breakpoint][subsampling]["static_" + staticQuality][scenario];
+
+		let dataRow     = document.createElement("tr");
+
+		let qualityCell = document.createElement("td");
+		let formatCell  = document.createElement("td");
+		let sizeCell    = document.createElement("td");
+		let ndssimCell  = document.createElement("td");
+		let dssimCell   = document.createElement("td");
+
+		qualityCell.appendChild(document.createTextNode(staticQuality                   ));
+		formatCell .appendChild(document.createTextNode(derivativeData.format           ));
+		sizeCell   .appendChild(document.createTextNode(fancyBytes(derivativeData.size) ));
+		ndssimCell .appendChild(document.createTextNode(derivativeData.ndssim.toFixed(5)));
+		dssimCell  .appendChild(document.createTextNode(derivativeData.dssim .toFixed(5)));
+
+		dataRow.appendChild(qualityCell);
+		dataRow.appendChild(formatCell );
+		dataRow.appendChild(sizeCell   );
+		dataRow.appendChild(ndssimCell );
+		dataRow.appendChild(dssimCell  );
+
+		dataTable.appendChild(dataRow);
+	}
+	for (let perceptualQuality of reportData["configuration"]["perceptualQualities"]) {
+		let derivativeData = imageData["derivatives"][breakpoint][subsampling]["perceptual_" + perceptualQuality][scenario];
+
+		let dataRow     = document.createElement("tr");
+
+		let qualityCell = document.createElement("td");
+		let formatCell  = document.createElement("td");
+		let sizeCell    = document.createElement("td");
+		let ndssimCell  = document.createElement("td");
+		let dssimCell   = document.createElement("td");
+
+		qualityCell.appendChild(document.createTextNode(getPerceptualQualityString(perceptualQuality) + ": " + derivativeData.quality));
+		formatCell .appendChild(document.createTextNode(derivativeData.format                                                        ));
+		sizeCell   .appendChild(document.createTextNode(fancyBytes(derivativeData.size)                                              ));
+		ndssimCell .appendChild(document.createTextNode(derivativeData.ndssim.toFixed(5)                                             ));
+		dssimCell  .appendChild(document.createTextNode(derivativeData.dssim .toFixed(5)                                             ));
+
+		dataRow.appendChild(qualityCell);
+		dataRow.appendChild(formatCell );
+		dataRow.appendChild(sizeCell   );
+		dataRow.appendChild(ndssimCell );
+		dataRow.appendChild(dssimCell  );
+
+		dataTable.appendChild(dataRow);
+	}
+
+	let imageDataContainer = document.getElementById("imageData");
+	imageDataContainer.replaceChild(dataTable, imageDataContainer.childNodes[0]);
+}
+
+showViewerImage();
+
+var inputElements = document.getElementsByClassName("input");
+Array.from(inputElements).forEach(function(element) {
+	element.onclick = showViewerImage;
+});
+
+document.addEventListener("keydown", function(e) {
+	var selectedImageName;
+	Array.from(imageNameElement.children).forEach(function(element) {
+		if (element.selected) selectedImageName = element;
+	})
+
+	var scenarioArray = Array.from(scenarioElements);
+	var scenarioIndex;
+	for (scenarioIndex = 0; scenarioIndex < scenarioArray.length; ++scenarioIndex) {
+		if (scenarioArray[scenarioIndex].checked) break;
+	}
+
+	var breakpointArray = Array.from(breakpointElements);
+	var breakpointIndex;
+	for (breakpointIndex = 0; breakpointIndex < breakpointArray.length; ++breakpointIndex) {
+		if (breakpointArray[breakpointIndex].checked) break;
+	}
+
+	var subsamplingArray = Array.from(subsamplingElements);
+	var subsamplingIndex;
+	for (subsamplingIndex = 0; subsamplingIndex < subsamplingArray.length; ++subsamplingIndex) {
+		if (subsamplingArray[subsamplingIndex].checked) break;
+	}
+
+	var qualityArray = Array.from(qualityElements);
+	var qualityIndex;
+	for (qualityIndex = 0; qualityIndex < qualityArray.length; ++qualityIndex) {
+		if (qualityArray[qualityIndex].checked) break;
+	}
+
+	var displayArray = Array.from(displayElements);
+	var displayIndex;
+	for (displayIndex = 0; displayIndex < displayArray.length; ++displayIndex) {
+		if (displayArray[displayIndex].checked) break;
+	}
+
+	switch (e.keyCode) {
+		case  38: // up key
+		case  40: // down key
+			var toSelect = (e.keyCode == 38) ? selectedImageName.previousElementSibling : selectedImageName.nextElementSibling;
+			if (null != toSelect) {
+				toSelect.selected = true;
+				showViewerImage();
+			}
+			e.preventDefault();
+			break;
+		case  83: // s key
+			var newIndex = scenarioIndex + 1;
+			var length = scenarioArray.length;
+			while (newIndex < 0           ) newIndex += length;
+			while (newIndex > (length - 1)) newIndex -= length;
+			scenarioArray[newIndex].checked = true;
+			showViewerImage();
+			e.preventDefault();
+			break;
+		case 189: // - key
+		case 187: // = key
+		case  66: // b key
+			var newIndex = breakpointIndex + (e.keyCode == 187 ? -1 : 1);
+			var length = breakpointArray.length;
+			while (newIndex < 0           ) newIndex += length;
+			while (newIndex > (length - 1)) newIndex -= length;
+			breakpointArray[newIndex].checked = true;
+			showViewerImage();
+			e.preventDefault();
+			break;
+		case  67: // c key
+			var newIndex = subsamplingIndex + 1;
+			var length = subsamplingArray.length;
+			while (newIndex < 0           ) newIndex += length;
+			while (newIndex > (length - 1)) newIndex -= length;
+			subsamplingArray[newIndex].checked = true;
+			showViewerImage();
+			e.preventDefault();
+			break;
+		case  68: // d key
+			var newIndex = displayIndex + 1;
+			var length = displayArray.length;
+			while (newIndex < 0           ) newIndex += length;
+			while (newIndex > (length - 1)) newIndex -= length;
+			displayArray[newIndex].checked = true;
+			showViewerImage();
+			e.preventDefault();
+			break;
+		case  37: // left key
+		case  39: // right key
+		case  81: // q key
+			var newIndex = qualityIndex + (e.keyCode == 37 ? -1 : 1);
+			var length = qualityArray.length;
+			while (newIndex < 0           ) newIndex += length;
+			while (newIndex > (length - 1)) newIndex -= length;
+			qualityArray[newIndex].checked = true;
+			showViewerImage();
+			e.preventDefault();
+			break;
+	}
+});
+		</script>
+	
+<div id="web-image-info" style="display: none;">400x400  50.01k</div></body></html>
